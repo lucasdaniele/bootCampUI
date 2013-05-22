@@ -2,45 +2,37 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.css" />
-  <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-  <script src="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.js"></script>
-  <script type="text/javascript" src="scripts.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.css" />
+    <script src="jquery.js"></script>
+    <script src="jquery.mobile-1.3.1.min.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
     <title>Globant :: Welcome to the HTML5 bootcamp</title>
   </head>
 <body >
   <div data-role="page" id="uno">
-  	  <div data-role="content" class= "container">	
-  	   	 <a href="#" data-role="button" id="btnId">A button</a>
-	  	   <input id="alias"></input>
-	    </div>
-	    <div class="background">  </div>
-	    <div class="floated">
-		  <div id="tweetsList"> </div>
-      <div class="modal"><!-- Place at bottom of page --></div>
-      <a href="#dos" data-transition="pop" data-role="button" id="btnId">ir a pagina 2 con pop</a>
-      <a href="#tres" data-transition="flow" data-role="button" id="btnId">ir a pagina 3 con flow</a>
-       <a href="sample1.html" rel="external" data-role="button" id="btnId">ir a Sample1 con flow</a>
-	  </div>
+  	     <div data-role="content" class= "container">	
+  	   	      <a href="#" data-role="button" id="btnId">A button</a>
+	  	        <input id="alias"></input>
+	       </div>
+	       <div class="background">  </div>
+	       <div class="floated">
+		          <div id="tweetsList"> </div>
+              <div class="modal"><!-- Place at bottom of page --></div>
+                    <a href="#dos" data-transition="pop" data-role="button" id="btnId">ir a pagina 2 con pop</a>
+                    <a href="#tres" data-transition="flow" data-role="button" id="btnId">ir a pagina 3 con flow</a>
+                    <a href="sample1.html" rel="external" data-role="button" id="btnId">ir a Sample1 con flow</a>
+	       </div>
   </div><!-- /page1 -->
   <div data-role="page" id="dos">
-    <a href="#uno" data-transition="slide" data-role="button" id="btnId">ir a pagina 1 con slide </a>
-    <a href="#tres" data-transition="slideup" data-role="button" id="btnId">ir a pagina 3 con slideup</a>
-    <p>pagina 2</p>
-              <div class="col-set" data-role="collapsible" data-collapsed="true">";
-                <h3>
-                    <img class="img-set"/>
-                        <div class="col-text"> + results[i].from_user + </div>
-                            <span class="ui-li-count ui-btn-up-c ui-btn-corner-all comment-count"> + i +"</span>
-                </h3>
-               <p> " + results[i].text + results[i].created_at + " </p>
-              </div>
-    </div><!-- /page2 -->
-    <div data-role="page" id="tres">
+       <a href="#uno" data-transition="slide" data-role="button" id="btnId">ir a pagina 1 con slide </a>
+       <a href="#tres" data-transition="slideup" data-role="button" id="btnId">ir a pagina 3 con slideup</a>
+       <p>pagina 2</p>
+  </div><!-- /page2 -->
+  <div data-role="page" id="tres">
       <a href="#uno" data-transition="slidedown" data-role="button" id="btnId">ir a pagina 1 con slidedown</a>
       <a href="#dos" data-transition="turn" data-role="button" id="btnId">ir a pagina 2 con turn</a>
       <p>pagina 3</p>
-      </div><!-- /page3 -->
+  </div><!-- /page3 -->
 </body>
 </html>
