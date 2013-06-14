@@ -1,16 +1,163 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1"> 
-		<title>Globant :: Welcome to the HTML5 bootcamp</title>
-		<script src="/js/jquery-1.9.1.min.js"></script>
-		<script src="/js/publisher.js"></script>
-		<script src="/js/ActorModule.js"></script>
-		<script src="/js/MovieModule.js"></script>
-		<script src="/js/DownloadableMovieClass.js"></script>
-		<script src="/js/Social.js"></script>
-		<script src="/js/player.js"></script>
-	</head>
-	<body></body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Globant :: Welcome to the HTML5 bootcamp</title>
+	<script data-main="js/app" src="js/lib/require.js"></script>
+  </head>
+<body>
+	<script id="handlebars-template" type="text/x-handlebars-template">
+		<div id="header">
+			<h1>Handlebars template</h1>
+		</div>
+		<div id="main-content">
+			<h1>{{name}}</h1>
+			{{#if photo}}
+			<img class="image" src={{photo}} width="150px" height="200px">
+			{{/if}}
+			<div class="education">
+				<h2>Education:</h2>
+				<p>University: {{university}}</p>
+			</div>
+			<div class="idioms">
+				<h2>Idioms:</h2>
+					<ul class="list">
+						{{#each languages }}
+							<li>{{this}}</li>
+						{{/each}}
+					</ul>
+			</div>
+			<div class="skills">
+				<h2>Skills:</h2>
+				<ul class="list">
+					{{#each skills}}
+					  <li>{{this}}</li>
+					{{/each}}
+				</ul>
+			</div>
+			<div class="experience">
+				<h2>Experience:</h2>
+				<ul class="list">
+					{{#each experiences}}
+						<li>{{this}}</li>
+					{{/each}}
+				</ul>
+			</div>
+			<div class="extra-information">
+				<h2>Extra information:</h2>
+				<p>Email: {{email}}</p>
+				<p>Phone: {{phone}}</p>
+			</div>
+		</div>
+		<div id="footer">
+			<p>Powered by Handlebars</p>
+		</div>
+	</script>
+	
+	<script type="x-tmpl" id="underscore-template">
+		<div id="header">
+			<h1>Underscore template</h1>
+		</div>
+		<div id="main-content">
+			<h1><%=name%></h1>
+			<% if(photo) { %>
+			<img class="image" src=<%=photo%> width="150px" height="200px">
+			<% } %>
+			<div class="education">
+				<h2>Education:</h2>
+				<p>University: <%=university%></p>
+			</div>
+			<div class="idioms">
+				<h2>Idioms:</h2>
+				<ul class="list">
+					<% _.each(languages, function(language) { %>
+						<li><%=language%></li>
+					<% }); %>
+				</ul>
+			</div>
+			<div class="skills">
+				<h2>Skills:</h2>
+				<ul class="list">
+					<% _.each(skills, function(skill) { %>
+					  <li><%=skill%></li>
+					<% }); %>
+				</ul>
+			</div>
+			<div class="experience">
+				<h2>Experience:</h2>
+				<ul class="list">
+					<% _.each(experiences, function(experience) { %>
+						<li><%=experience%></li>
+					<% }); %>
+				</ul>
+			</div>
+			<div class="extra-information">
+				<h2>Extra information:</h2>
+				<p>Email: <%=email%></p>
+				<p>Phone: <%=phone%></p>
+			</div>
+
+		</div>
+		<div id="footer">
+			<p>Powered by Underscore</p>
+		</div>
+
+    </script> <!-- End Underscore template -->
+
+    <script id="dust-template" type="text/template">
+		<div id="header">
+			<h1>Dust template</h1>
+		</div>
+		<div id="main-content">
+			<h1>{name}</h1>
+			{?photo}
+			<img class="image" src={photo} width="150px" height="200px">
+			{/photo}
+			<div class="education">
+				<h2>Education:</h2>
+				<p>University: {university}</p>
+			</div>
+			<div class="idioms">
+				<h2>Idioms:</h2>
+				<ul class="list">
+					{#languages}
+						<li>{.}</li>
+					{/languages}
+				</ul>
+			</div>
+			<div class="skills">
+				<h2>Skills:</h2>
+				<ul class="list">
+					{#skills}
+					  <li>{.}</li>
+					{/skills}
+				</ul>
+			</div>
+			<div class="experience">
+				<h2>Experience:</h2>
+				<ul class="list">
+					{#experiences}
+						<li>{.}</li>
+					{/experiences}
+				</ul>
+			</div>
+			<div class="extra-information">
+				<h2>Extra information:</h2>
+				<p>Email: {email}</p>
+				<p>Phone: {phone}</p>
+			</div>
+		</div>
+		<div id="footer">
+			<p>Powered by Dust</p>
+		</div>
+
+    </script>
+	<ul class="engine-list">
+		<li><a href="#" id="handlebars-template-link">Handlebars</a></li>
+		<li><a href="#" id="underscore-template-link">Underscore</a></li>
+		<li><a href="#" id="dust-template-link">Dust</a></li>
+	</ul>
+	<div class="main"></div>
+
+</body>
 </html>

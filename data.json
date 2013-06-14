@@ -1,0 +1,12 @@
+{
+	"name": "Lucas", 
+	"lastName": "Daniele",
+	"fullName": "Lucas Daniele",
+	"img": "",
+	"email": "lucas.danieley@globant.com",
+	"phone": "249415311008",
+	"university": "UNICEN",
+	"languages":["Ingles","Espanol"],
+	"skills": ["Java", "PHP", "Scrum"],
+	"experiences": ["unicenvirtual", "Globant"]
+}
