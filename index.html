@@ -1,163 +1,85 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Globant :: Welcome to the HTML5 bootcamp</title>
-	<script data-main="js/app" src="js/lib/require.js"></script>
-  </head>
+<!-- saved from url=(0022)http://localtodos.com/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>Backbone.js Todos</title>
+  <link rel="stylesheet" href="css/todos.css">
+  <script type="text/javascript" async="" src="./libs/ga.js"></script><script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5201171-9']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
+  '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+</head>
+
 <body>
-	<script id="handlebars-template" type="text/x-handlebars-template">
-		<div id="header">
-			<h1>Handlebars template</h1>
-		</div>
-		<div id="main-content">
-			<h1>{{name}}</h1>
-			{{#if photo}}
-			<img class="image" src={{photo}} width="150px" height="200px">
-			{{/if}}
-			<div class="education">
-				<h2>Education:</h2>
-				<p>University: {{university}}</p>
-			</div>
-			<div class="idioms">
-				<h2>Idioms:</h2>
-					<ul class="list">
-						{{#each languages }}
-							<li>{{this}}</li>
-						{{/each}}
-					</ul>
-			</div>
-			<div class="skills">
-				<h2>Skills:</h2>
-				<ul class="list">
-					{{#each skills}}
-					  <li>{{this}}</li>
-					{{/each}}
-				</ul>
-			</div>
-			<div class="experience">
-				<h2>Experience:</h2>
-				<ul class="list">
-					{{#each experiences}}
-						<li>{{this}}</li>
-					{{/each}}
-				</ul>
-			</div>
-			<div class="extra-information">
-				<h2>Extra information:</h2>
-				<p>Email: {{email}}</p>
-				<p>Phone: {{phone}}</p>
-			</div>
-		</div>
-		<div id="footer">
-			<p>Powered by Handlebars</p>
-		</div>
-	</script>
-	
-	<script type="x-tmpl" id="underscore-template">
-		<div id="header">
-			<h1>Underscore template</h1>
-		</div>
-		<div id="main-content">
-			<h1><%=name%></h1>
-			<% if(photo) { %>
-			<img class="image" src=<%=photo%> width="150px" height="200px">
-			<% } %>
-			<div class="education">
-				<h2>Education:</h2>
-				<p>University: <%=university%></p>
-			</div>
-			<div class="idioms">
-				<h2>Idioms:</h2>
-				<ul class="list">
-					<% _.each(languages, function(language) { %>
-						<li><%=language%></li>
-					<% }); %>
-				</ul>
-			</div>
-			<div class="skills">
-				<h2>Skills:</h2>
-				<ul class="list">
-					<% _.each(skills, function(skill) { %>
-					  <li><%=skill%></li>
-					<% }); %>
-				</ul>
-			</div>
-			<div class="experience">
-				<h2>Experience:</h2>
-				<ul class="list">
-					<% _.each(experiences, function(experience) { %>
-						<li><%=experience%></li>
-					<% }); %>
-				</ul>
-			</div>
-			<div class="extra-information">
-				<h2>Extra information:</h2>
-				<p>Email: <%=email%></p>
-				<p>Phone: <%=phone%></p>
-			</div>
 
-		</div>
-		<div id="footer">
-			<p>Powered by Underscore</p>
-		</div>
+ <div id="todoapp">
 
-    </script> <!-- End Underscore template -->
+    <header>
+      <h1>Favorite Films</h1>
+      <input id="new-title" type="text" placeholder="insert your favorite film">
+      <input id="new-director" type="text" placeholder="insert the director">
+      <input id="new-year" type="text" placeholder="insert the year">
+      <button id="new-filmBtn">Save</button>
+    </header>
 
-    <script id="dust-template" type="text/template">
-		<div id="header">
-			<h1>Dust template</h1>
-		</div>
-		<div id="main-content">
-			<h1>{name}</h1>
-			{?photo}
-			<img class="image" src={photo} width="150px" height="200px">
-			{/photo}
-			<div class="education">
-				<h2>Education:</h2>
-				<p>University: {university}</p>
-			</div>
-			<div class="idioms">
-				<h2>Idioms:</h2>
-				<ul class="list">
-					{#languages}
-						<li>{.}</li>
-					{/languages}
-				</ul>
-			</div>
-			<div class="skills">
-				<h2>Skills:</h2>
-				<ul class="list">
-					{#skills}
-					  <li>{.}</li>
-					{/skills}
-				</ul>
-			</div>
-			<div class="experience">
-				<h2>Experience:</h2>
-				<ul class="list">
-					{#experiences}
-						<li>{.}</li>
-					{/experiences}
-				</ul>
-			</div>
-			<div class="extra-information">
-				<h2>Extra information:</h2>
-				<p>Email: {email}</p>
-				<p>Phone: {phone}</p>
-			</div>
-		</div>
-		<div id="footer">
-			<p>Powered by Dust</p>
-		</div>
+    <section id="main" style="display: none;">
+      <input id="toggle-all" type="checkbox">
+      <label for="toggle-all">Mark all as complete</label>
+      <ul id="todo-list"></ul>
+    </section>
 
-    </script>
-	<ul class="engine-list">
-		<li><a href="#" id="handlebars-template-link">Handlebars</a></li>
-		<li><a href="#" id="underscore-template-link">Underscore</a></li>
-		<li><a href="#" id="dust-template-link">Dust</a></li>
-	</ul>
-	<div class="main"></div>
+    <footer style="display: none;">
+      <a id="clear-completed">Clear completed</a>
+      <div id="todo-count"></div>
+    </footer>
 
-</body>
-</html>
+  </div>
+
+  <div id="instructions">
+    Double-click to edit a todo.
+  </div>
+
+  <div id="credits">
+    Created by
+    <br>
+    <a href="http://jgn.me/">Jérôme Gravel-Niquet</a>.
+    <br>Rewritten by: Lucas Daniele.
+  </div>
+
+  <script src="./libs/jquery.js"></script>
+  <script src="./libs/underscore.js"></script>
+  <script src="./libs/backbone.js"></script>
+  <script src="./libs/backbone.localStorage.js"></script>
+  <script src="./libs/todos.js"></script>
+
+  <!-- Templates -->
+
+  <script type="text/template" id="item-template">
+    <div class="view">
+      <input class="toggle" type="checkbox" <%= done ? 'checked="checked"' : '' %> />
+      <label><%- title %></label>
+      <a class="destroy"></a>
+    </div>
+    <input class="edit" type="text" value="<%- title %>" />
+  </script>
+
+  <script type="text/template" id="stats-template">
+    <% if (done) { %>
+      <a id="clear-completed">Clear <%= done %> completed <%= done == 1 ? 'item' : 'items' %></a>
+    <% } %>
+    <div class="todo-count"><b><%= remaining %></b> <%= remaining == 1 ? 'item' : 'items' %> left</div>
+  </script>
+
+  
+
+</body></html>
