@@ -1,0 +1,26 @@
+[
+  {"title": "Rocky",
+    "director": "Silvestre",
+    "year": "1980"
+  },
+
+  {"title": "Rambo",
+    "director": "Silvestre",
+    "year": "1985"
+  },
+
+  {"title": "Terminator",
+    "director": "Arnol",
+    "year": "1989"
+  },
+
+  {"title": "Dragon",
+    "director": "Bruce Lee",
+    "year": "1980"
+  },
+
+  {"title": "Alcon",
+    "director": "Silvestre",
+    "year": "1992"
+  }
+]

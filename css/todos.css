@@ -78,11 +78,6 @@ body {
 	border-bottom: none;
 }
 
-#todo-list li.done label {
-	color: #777777;
-	text-decoration: line-through;
-}
-
 #todo-list .destroy {
 	position: absolute;
 	right: 5px;
