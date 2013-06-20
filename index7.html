@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html manifest="cache.appcache">
+  <head>
+      <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+  </head>
+  <body>
+    <header>
+       <nav>
+        <ul>
+          <li><a href="index.html">Point 2</a></li>
+          <li><a href="index3.html">Point 3</a></li>
+          <li><a href="index7.html">Point 7</a></li>
+        </ul>
+      <h1>Cache Manifest</h1></div>
+          </header>  
+    <div id="excerpt">
+      this page should be cached
+
+    </div>
+    <script>
+            window.applicationCache.addEventListener('updateready', function(e) {
+            if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+              window.applicationCache.swapCache();
+              if (confirm('A new version of this site is available. Load it?')) {
+                window.location.reload();
+              }
+            }
+          }, false);
+    </script>
+  </body>
+</html>​
