@@ -1,69 +1,67 @@
 <!DOCTYPE html>
-<!-- saved from url=(0022)http://localtodos.com/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
-  <title>Backbone.js Movies</title>
-  <link rel="stylesheet" href="css/todos.css">
-  <script type="text/javascript" async="" src="./libs/ga.js"></script><script type="text/javascript">
+  <title>HTML5 Tags</title>
+  <link rel="stylesheet" href="css/html5tags.css">
   </script>
 </head>
-
 <body>
-
- <div id="todoapp">
-
-    <header>
-      <div id="new-todo">
-      <h1>Your Favorite Movies</h1>
-      <input id="new-title" type="text" placeholder="insert your favorite film">
-      <input id="new-director" type="text" placeholder="insert the director">
-      <input id="new-year" type="text" placeholder="insert the year">
-      <button id="new-filmBtn">Save</button>
-      </div>
+    <header class="mainHeader">
+      <hgroup>
+          <h1>hgroup h1</h1>
+          <h2>hgroup h2</h2>
+        </hgroup>
+        <nav>
+          <h2>this is a nav tag on header</h2>
+          <ul class="navHeader">
+            <li><a href="index.html">home</a></li>
+            <li><a href="mostlyFluid.html">Mostly fluid</a></li>
+            <li><a href="columnDrop.html">Column drop</a></li>
+            <li><a href="layoutShifter.html">Layout shifter</a></li>
+            <li><a href="offCanvas.html">Off canvas</a></li>
+          </ul>
+        </nav>
     </header>
-
-    <section id="main" style="display: none;">
-      
-      <ul id="todo-list"></ul>
+    <aside class="aside">
+        <h2>this is a aside tag</h2>
+        <ul>
+          <li><a href="#">option 1</a></li>
+          <li><a href="#">option 2</a></li>
+          <li><a href="#">option 3</a></li>
+        </ul>
+    </aside>
+    <section id="firtsSection">
+        <h2>Article on Section 1</h2>
+        <article clase="article">
+            <header>
+              <h1>Article 1</h1>
+              <p>Published: <time pubdate="pubdate">2009-10-09</time></p>
+            </header>
+            <p>This is the <b>article</b> content, bla bla bla...</p>
+            ...
+            <footer>
+              <p><small>this is the article footer</small></p>
+            </footer>
+        </article>
     </section>
-
-    <footer style="display: none;">
-
+    <section id="secondSection">
+        <h2>Article on Section 2</h2>
+        <article clase="article">
+            <header>
+              <h1>Article 2</h1>
+              <p>Published: <time pubdate="pubdate">2009-10-09</time></p>
+            </header>
+            <p>This is the <b>article</b> content, bla bla bla...</p>
+            ...
+            <footer>
+              <p><small>this is the article footer</small></p>
+            </footer>
+        </article>
+    </section>
+    <footer class="mainFooter">
     </footer>
-
-  </div>
-
-  <div id="instructions">
-    Double-click to edit a Movie.
-  </div>
-
-  <div id="credits">
-    Created by
-    <br>Lucas Daniele.
-    <br>The initial movies are on data/init.json
-  </div>
-
-  <script src="./libs/jquery.js"></script>
-  <script src="./libs/underscore.js"></script>
-  <script src="./libs/backbone.js"></script>
-  <script src="./libs/backbone.localStorage.js"></script>
-  <script src="./libs/todos.js"></script>
-
-  <!-- Templates -->
-
-  <script type="text/template" id="item-template">
-    <div class="view">
-      <label><%- title %>,<%- director %>, <%- year %></label>
-      <a class="destroy"></a>
-    </div>
-    <input class="edit" type="text" value="<%- title %>,<%- director %>, <%- year %>" />
-  </script>
-
-  <script type="text/template" id="stats-template">
-
-    <div class="todo-count"><b><%= remaining %></b> <%= remaining == 1 ? 'item' : 'Movies' %> </div>
-  </script>
-
-  
+    <mark>this is a mark tag
+    </mark>
+    <script type="text/javascript" src="js/libs/jquery.js"></script>
+    <script type="text/javascript" src="js/libs/css3-mediaqueries.js"></script>
 
 </body></html>

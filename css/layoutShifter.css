@@ -1,0 +1,98 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.4em;
+  color: #333333;
+  -webkit-font-smoothing: antialiased;
+}
+
+.mainHeader {
+  text-align: center;
+  border-bottom: 2px solid;
+  border-color: grey;
+}
+
+.navHeader li{
+  display: inline;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.navHeader {
+  padding: 0;
+}
+
+.container {
+  background: #aaaaaa;
+  padding: 10px;
+  height: 800px;
+}
+.firstSection {
+  background-color: #228B22;
+  border-color: #222222;
+}
+.secondSection {
+  background-color: #32CD32;
+  border-color: #222222;
+}
+.thirdSection {
+  background-color: #E4EEEB;
+  border-color: #222222;
+}
+footer {
+  clear: both;
+  width: 200px
+}
+
+@media screen and (min-width: 1200px) {
+  .firstSection {
+  	height: 100%;
+    width: 20%;
+    float: left;
+  }
+  .secondSection {
+  	height: 50%;
+    width: 80%;
+    float: right;
+  }
+  .thirdSection {
+  	height: 50%;
+    width: 80%;
+    float: right;
+  }
+}
+
+@media screen and (min-width: 840px) and (max-width: 1200px) {
+  .firstSection {
+  	float: left;
+    width: 100%;
+    
+  }
+  .secondSection {
+  	width: 100%;
+    float: right;    
+  }
+  .thirdSection {
+   width: 100%;
+    float: left;
+  }
+}
+
+@media screen and (max-width: 840px){
+   .firstSection {
+    width: 100%;
+    float: right;
+  }
+  .secondSection {
+    width: 100%;
+    float: right;
+  }
+  .thirdSection {
+    width: 100%;
+  }
+}

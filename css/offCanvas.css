@@ -1,0 +1,147 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.4em;
+  color: #333333;
+  -webkit-font-smoothing: antialiased;
+}
+
+.mainHeader {
+  text-align: center;
+  border-bottom: 2px solid;
+  border-color: grey;
+}
+
+.navHeader li{
+  display: inline;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.navHeader {
+  padding: 0;
+}
+
+.container {
+  background: #aaaaaa;
+  padding: 10px;
+  height: 800px;
+}
+.firstSection {
+  background-color: #228B22;
+  border-color: #222222;
+}
+.secondSection {
+  background-color: #32CD32;
+  border-color: #222222;
+}
+.thirdSection {
+  background-color: #E4EEEB;
+  border-color: #222222;
+}
+footer {
+  clear: both;
+  height: 20px
+}
+
+@media screen and (min-width: 1200px) {
+   .firstSection {
+    height: 100%;
+    width: 500px;
+    float: none;
+    right:auto;
+    left:auto;
+    top:auto;
+    position: relative;
+    bottom:auto
+  }
+  .secondSection {
+    height: 100%;
+    width: 500px;
+    float: none;
+    right:auto;
+    left:auto;
+    top:auto;
+    bottom:auto
+  }
+  .thirdSection {
+    height: 100%;
+    width: 500px;
+    float: none;
+    right:auto;
+    left:auto;
+    top:auto;
+    bottom:auto
+  }
+}
+
+@media screen and (min-width: 840px) and (max-width: 1200px) {
+ .firstSection {
+    height: 100%;
+    width: 500px;
+    float: none;
+    right:auto;
+    left:auto;
+    top:auto;
+    position: relative;
+    bottom:auto
+  }
+  .secondSection {
+    height: 100%;
+    width: 500px;
+    float: none;
+    right:auto;
+    left:auto;
+    top:auto;
+    position: relative;
+    bottom:auto
+  }
+  .thirdSection {
+    height: 100%;
+    width: 500px;
+    float: none;
+    right:auto;
+    left:auto;
+    top:auto;
+    position: relative;
+    bottom:auto
+  }
+}
+
+@media screen and (max-width: 840px){
+  .firstSection {
+    height: 100%;
+    width: 500px;
+    float: none;
+    right:auto;
+    left:auto;
+    top:auto;
+    position: relative;
+    bottom:auto
+  }
+  .secondSection {
+    height: 100%;
+    width: 500px;
+    float: none;
+    right:auto;
+    left:auto;
+    top:auto;
+    position: relative;
+    bottom:auto
+  }
+  .thirdSection {
+    height: 100%;
+    width: 500px;
+    float: none;
+    right:auto;
+    left:auto;
+    top:auto;
+    position: relative;
+    bottom:auto
+  }
+}
